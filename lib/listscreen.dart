@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:graduation_project_my_own_talki/Abdo_Screen/ChatScreen/main_chat_screen.dart';
+import 'package:graduation_project_my_own_talki/Abdo_Screen/ChatWallPaperScreen/chatwallpaper_screen.dart';
 import 'package:graduation_project_my_own_talki/Abdo_Screen/GroupChatScreen/main_group_chat_screen.dart';
 import 'package:graduation_project_my_own_talki/Ahmed_Screens/Home_Screen_Messenger/add_Member.dart';
 import 'package:graduation_project_my_own_talki/Mohamed/Add_Members.dart';
@@ -7,13 +8,17 @@ import 'package:graduation_project_my_own_talki/Mohamed/FilesScren.dart';
 import 'package:graduation_project_my_own_talki/Mohamed/GroupSettings.dart';
 import 'package:graduation_project_my_own_talki/Mohamed/LinksScren.dart';
 import 'package:graduation_project_my_own_talki/Mohamed/Preview.dart';
+import 'package:graduation_project_my_own_talki/Nada_Screens/Custom_Wallpaper.dart';
 import 'package:graduation_project_my_own_talki/Nada_Screens/Group_Info.dart';
 import 'package:graduation_project_my_own_talki/Nada_Screens/Photo_Screen.dart';
 import 'package:graduation_project_my_own_talki/Nada_Screens/User_Info.dart';
 import 'package:graduation_project_my_own_talki/Nada_Screens/Video_Call_Group.dart';
 import 'package:graduation_project_my_own_talki/Nada_Screens/Video_Call_User.dart';
 import 'package:graduation_project_my_own_talki/Nada_Screens/Video_Screen.dart';
+import 'package:graduation_project_my_own_talki/lib/Mazen_Screens/bright.dart';
+import 'package:graduation_project_my_own_talki/lib/Mazen_Screens/dark.dart';
 import 'package:graduation_project_my_own_talki/lib/Mazen_Screens/edit.dart';
+import 'package:graduation_project_my_own_talki/lib/Mazen_Screens/solid_color.dart';
 
 class listscreen extends StatelessWidget {
   static const String route_listscreen = 'listscreen';
@@ -196,7 +201,61 @@ class listscreen extends StatelessWidget {
                   textColor: Colors.white,
                   color: Colors.blue,
                 ),  
-                
+                 SizedBox(height: 10,),
+                MaterialButton(
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (_) {
+                      return ChatWallPaperScreen();
+                    }));
+                  },
+                  child: Text("Chat Wallpaper"),
+                  textColor: Colors.white,
+                  color: Colors.blue,
+                ),  
+                SizedBox(height: 10,),
+                MaterialButton(
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (_) {
+                      return Custom_Wallpaper();
+                    }));
+                  },
+                  child: Text("Custom Wallpaper"),
+                  textColor: Colors.white,
+                  color: Colors.blue,
+                ),  
+                SizedBox(height: 10,),
+                MaterialButton(
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (_) {
+                      return bright();
+                    }));
+                  },
+                  child: Text("Bright"),
+                  textColor: Colors.white,
+                  color: Colors.blue,
+                ),  
+                 SizedBox(height: 10,),
+                MaterialButton(
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (_) {
+                      return dark();
+                    }));
+                  },
+                  child: Text("Dark"),
+                  textColor: Colors.white,
+                  color: Colors.blue,
+                ),  
+                SizedBox(height: 10,),
+                MaterialButton(
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (_) {
+                      return solid_color();
+                    }));
+                  },
+                  child: Text("Solid Color"),
+                  textColor: Colors.white,
+                  color: Colors.blue,
+                ),  
               ],
             ),
           ),
